@@ -29,6 +29,9 @@ export default {
 						<button onClick={() => TCS.setTime(TCS.iState.time + 50)}>
 							倍速++: {TCS.iState.time}
 						</button>
+						<button onClick={() => TCS.setTime(TCS.iState.time - 50)}>
+							倍速--: {TCS.iState.time}
+						</button>
 					</div>
 				</>
 			)

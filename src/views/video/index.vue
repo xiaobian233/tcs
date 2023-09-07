@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-import Video from '@/components/video/index'
+import Video from './video/index'
 </script>
