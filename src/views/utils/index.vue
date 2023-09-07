@@ -6,9 +6,23 @@
     <h2 @click="setup4">实现 Promise</h2>
     <h2 @click="setup5">新版本发布后，怎么用技术手段通知用户刷新页面？</h2>
     <h2 @click="setup6">实现一个数组打平方法，支持第二个参数(可指定打平层级)</h2>
+    <h2 v-copy="'测试数据'">copy 测试数据</h2>
+    <h2 v-longpress="longpress">longpress 长按</h2>
+    <h2 v-debounce="debounce">debounce 防抖</h2>
+    <div style="width:500px; height: 500px;"
+        v-waterMarker="{ text: '测试', font: '16px Microsoft JhengHei', textColor: 'rgba(180, 180, 180, 0.4)' }">
+        xzczxczczczczczczaww213131
+        <br>
+        <br>
+        <br>
+        zxczxczzxc
+    </div>
+    <h2 style="z-index: 10;" v-drag>拖拽功能测试</h2>
+    <img v-lazy="'//vjs.zencdn.net/v/oceans.png'" v-drag alt="">
 </template>
 
 <script setup lang="js">
+import { vCopy, vDebounce, vLongpress, vDrag, vLazy, vWaterMarker } from '@/directives/index.js'
 const setup1 = () => {
     const obj = {}
     const isObject = val => typeof val === 'object' && !Array.isArray(val) && val !== null && Object.keys(val).length != 0
@@ -139,5 +153,14 @@ const setup6 = () => {
     console.error('1 and null:', array.newFlat(1));
     console.error('2:', array.newFlat(2));
     console.error('9:', array.newFlat(9));
+}
+
+const longpress = () => {
+    alert('长按')
+}
+let index = 0
+const debounce = (e) => {
+    index++
+    console.error('多次点击', index)
 }
 </script>

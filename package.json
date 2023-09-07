@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ant-design-vue": "^4.0.2",
     "pinia": "^2.1.6",
     "sass": "^1.66.1",
     "vue": "^3.3.4",
@@ -16,7 +17,6 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.3.1",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
-    "unplugin-vue-components": "^0.25.2",
     "video.js": "^8.5.2",
     "vite": "^4.4.9"
   }

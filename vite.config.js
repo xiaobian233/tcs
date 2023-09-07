@@ -11,15 +11,15 @@ export default defineConfig({
 	base: './',
 	mode: 'production',
 	plugins: [
-		vue(),
-		vueJsx(),
 		Components({
 			resolvers: [
 				AntDesignVueResolver({
-					importStyle: false, // css in js
+					importStyle: true, // css in js
 				}),
 			],
 		}),
+		vue(),
+		vueJsx(),
 	],
 	resolve: {
 		alias: {
